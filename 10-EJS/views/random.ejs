@@ -1,0 +1,19 @@
+<%- include("partials/head") %>
+
+<%- include('partials/navbar') %> 
+
+<h1>Random Number</h1>
+
+<h2> <%= randNum %> </h2>
+
+<% if (randNum % 2 === 0) { %>
+    <h3>Even Number!</h3>
+    <p>even</p>
+<% } else { %>
+    <h3>Odd Number!</h3>
+    <p>odd</p>
+<% } %>
+
+<h3> <%= randNum % 2 === 0 ? "EVEN" : "ODD" %> </h3>
+
+<%- include('partials/footer') %> 

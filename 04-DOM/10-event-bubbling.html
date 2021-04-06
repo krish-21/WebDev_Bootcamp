@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Bubbling</h1>
+
+    <!-- all three events will be tirggered -->
+    <!-- Event will bubble up so order will be from clicked event to the outer event -->
+    <section onclick="alert('Section Clicked')">
+        <p onclick="alert('Paragraph Clicked')">
+            I am a paragraph
+            <button onclick="alert('Button Clicked')" id="btn1">Click</button>
+        </p>
+    </section>
+
+    <div class="" id="container">
+        Click to hide
+        <button id="btn2">Change Color</button>
+    </div>
+
+    <script src="10-event-bubbling.js"></script>
+</body>
+</html>

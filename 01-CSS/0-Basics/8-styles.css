@@ -1,0 +1,51 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+#middle {
+    background-color: #81b29a;
+}
+
+/* positioned acc to normal flow of document
+top, right, bottom, left & z-index have not effect */
+#static #middle {
+    position: static;
+    top: 100px;
+}
+
+/* positioned according to normal flow of document
+then offset relative to itself based on top, left, bottom & left
+space is preserved */
+#relative #middle {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+/* #absolute {
+    position: relative;
+} */
+
+/* removed from the document flow
+no space created
+positioned to its closest positionded ancestor 
+otherwise, placed relaive to initial containing block */
+#absolute #middle {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+/* removed from the document flow
+no space created
+positioned relaive to initial containing block
+*/
+#fixed #middle {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
